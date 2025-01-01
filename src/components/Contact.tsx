@@ -10,7 +10,7 @@ export default function Contact() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <Mail className="mx-auto mb-4 text-blue-500" size={24} />
-              <p className="text-gray-600">dharunmax@example.com</p>
+              <p className="text-gray-600">dharunmax@gmail.com</p>
             </div>
             <div className="text-center">
               <Phone className="mx-auto mb-4 text-blue-500" size={24} />
