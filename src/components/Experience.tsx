@@ -12,7 +12,7 @@ export default function Experience() {
             <div className="mb-8">
               <div className="flex items-center gap-2 text-blue-500 mb-2">
                 <Briefcase size={20} />
-                <span className="font-semibold">2022 - Present</span>
+                <span className="font-semibold">Jun 2024 - Dec 2024</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Associate Software Engineer</h3>
               <p className="text-gray-600 mb-2">DHL</p>
