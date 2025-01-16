@@ -6,7 +6,7 @@ export default function Skills() {
     },
     {
       title: 'Frameworks',
-      skills: ['ReactJS', 'AngularJS']
+      skills: ['AngularJS', 'ReactJS']
     },
     {
       title: 'Developer Tools',
