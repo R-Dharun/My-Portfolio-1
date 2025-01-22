@@ -1,7 +1,32 @@
-
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    setIsSubmitting(true);
+    try {
+      await emailjs.sendForm(
+        'service_gevggjm', // Replace with your EmailJS service ID
+        'template_x48stvp', // Replace with your EmailJS template ID
+        formRef.current,
+        'f-ToyFtBGeUu7uTEv' // Replace with your EmailJS public key
+      );
+      toast.success('Message sent successfully!');
+      formRef.current.reset();
+    } catch (error) {
+      toast.error('Failed to send message. Please try again.');
+    }
+    setIsSubmitting(false);
+  };
+
   return (
     <section className="py-20 bg-gray-50" id="contact">
       <div className="container mx-auto px-4">
@@ -14,41 +39,49 @@ export default function Contact() {
             </div>
             <div className="text-center">
               <Phone className="mx-auto mb-4 text-blue-500" size={24} />
-              <p className="text-gray-600">+1 689 346 5100 </p>
+              <p className="text-gray-600">+1 689 346 5100</p>
             </div>
             <div className="text-center">
               <MapPin className="mx-auto mb-4 text-blue-500" size={24} />
-              <p className="text-gray-600">Winter Springs, FL , USA</p>
+              <p className="text-gray-600">Winter Springs, FL, USA</p>
             </div>
           </div>
-          <form className="space-y-6">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <input
                 type="text"
+                name="name"
                 placeholder="Name"
+                required
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
               />
               <input
                 type="email"
+                name="email"
                 placeholder="Email"
+                required
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
               />
             </div>
             <input
               type="text"
+              name="subject"
               placeholder="Subject"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             />
             <textarea
+              name="message"
               placeholder="Message"
               rows={6}
+              required
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors"
+              disabled={isSubmitting}
+              className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
