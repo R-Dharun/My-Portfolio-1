@@ -1,6 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
 export default function Contact() {
@@ -11,18 +10,31 @@ export default function Contact() {
     e.preventDefault();
     if (!formRef.current) return;
 
+    const formData = new FormData(formRef.current);
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      data[key] = value as string;
+    });
+
     setIsSubmitting(true);
     try {
-      await emailjs.sendForm(
-        'service_gevggjm', // Replace with your EmailJS service ID
-        'template_x48stvp', // Replace with your EmailJS template ID
-        formRef.current,
-        'f-ToyFtBGeUu7uTEv' // Replace with your EmailJS public key
-      );
-      toast.success('Message sent successfully!');
-      formRef.current.reset();
+      // Send the form data to the Netlify function
+      const response = await fetch('./send-mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        toast.success('Message sent successfully!');
+        formRef.current.reset();
+      } else {
+        toast.error(result.message || 'Failed to send message. Please try again.');
+      }
     } catch (error) {
       toast.error('Failed to send message. Please try again.');
+      console.error(error);
     }
     setIsSubmitting(false);
   };
