@@ -1,4 +1,3 @@
-
 import { Briefcase } from 'lucide-react';
 
 export default function Experience() {
@@ -21,6 +20,23 @@ export default function Experience() {
                 <li>Worked on innovative projects utilizing the OpenAI API, demonstrating expertise in Generative AI and machine learning applications.</li>
                 <li>Leveraged GitHub for version control and Microsoft Azure for deploying scalable applications, ensuring efficient deployment workflows.</li>
                 <li>Designed and implemented interactive dashboards in Power BI tailored to the finance team's requirements, enhancing data visualization.</li>
+              </ul>
+            </div>
+            
+            <div className="mb-8">
+              <div className="flex items-center gap-2 text-blue-500 mb-2">
+                <Briefcase size={20} />
+                <span className="font-semibold">Jan 2023 - May 2024</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Data Entry & Management Intern</h3>
+              <p className="text-gray-600 mb-2"> SRIRAM Weaving Mill Ltd</p>
+              <ul className="list-disc list-inside text-gray-600">
+                <li>Managed large volumes of data related to machine parts and operations, ensuring accuracy and organization.</li>
+                <li>Performed data entry using Excel, maintaining records of machine components and replacements.</li>
+                <li>Utilized Sulcol software to look up machine parts and track replacements.</li>
+                <li>Created and maintained documentation using Microsoft Word for operational records.</li>
+                <li>Stored and backed up data securely using Google Drive for easy retrieval and data safety.</li>
+                <li>Collaborated with the team to ensure smooth data management and machine maintenance workflows.</li>
               </ul>
             </div>
           </div>
