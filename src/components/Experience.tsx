@@ -16,7 +16,7 @@ export default function Experience() {
               </div>
               <h3 className="text-xl font-bold mb-2">Java Full Stack Trainee</h3>
               <p className="text-gray-600 mb-2">Revature Pro</p>
-              <ul className="list-disc list-inside text-gray-600">
+              <ul className="list-disc list-outside pl-5 text-gray-600 leading-relaxed">
                 <li>Trained in Java, Spring Boot, Hibernate, and React.js for full-stack web development.</li>
                 <li>Built and deployed scalable apps using TypeScript, SQL Server, and Azure Services.</li>
                 <li>Integrated RESTful APIs with React.js for dynamic front-end experiences.</li>
@@ -32,7 +32,7 @@ export default function Experience() {
               </div>
               <h3 className="text-xl font-bold mb-2">Associate Software Engineer</h3>
               <p className="text-gray-600 mb-2">DHL</p>
-              <ul className="list-disc list-inside text-gray-600">
+              <ul className="list-disc list-outside pl-5 text-gray-600 leading-relaxed">
                 <li>Developed and maintained web applications using modern technologies, like ReactJS, NodeJS.</li>
                 <li>Worked on innovative projects utilizing the OpenAI API, demonstrating expertise in Generative AI and machine learning applications.</li>
                 <li>Leveraged GitHub for version control and Microsoft Azure for deploying scalable applications, ensuring efficient deployment workflows.</li>
@@ -47,7 +47,7 @@ export default function Experience() {
               </div>
               <h3 className="text-xl font-bold mb-2">Data Entry & Management Intern</h3>
               <p className="text-gray-600 mb-2"> SRIRAM Weaving Mill Ltd</p>
-              <ul className="list-disc list-inside text-gray-600">
+              <ul className="list-disc list-outside pl-5 text-gray-600 leading-relaxed">
                 <li>Managed large volumes of data related to machine parts and operations, ensuring accuracy and organization.</li>
                 <li>Performed data entry using Excel, maintaining records of machine components and replacements.</li>
                 <li>Utilized Sulcol software to look up machine parts and track replacements.</li>

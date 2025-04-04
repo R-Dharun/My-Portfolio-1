@@ -12,7 +12,7 @@ export default function Education() {
             <div className="mb-8">
               <div className="flex items-center gap-2 text-blue-500 mb-2">
                 <GraduationCap size={20} />
-                <span className="font-semibold">2020 2024</span>
+                <span className="font-semibold">2020 - 2024</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Bachelor of Engineering</h3>
               <p className="text-gray-600 mb-2">Mepco Schlenk Engineering College</p>

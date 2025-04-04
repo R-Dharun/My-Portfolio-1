@@ -6,15 +6,19 @@ export default function Skills() {
     },
     {
       title: 'Frameworks',
-      skills: ['AngularJS', 'ReactJS']
+      skills: ['Angular', 'Spring Framework']
     },
     {
       title: 'Developer Tools',
-      skills: ['GitHub', 'VSCode']
+      skills: ['GitHub', 'Visual Studio Code', 'Postman',]
     },
     {
       title: 'Databases',
       skills: ['MySQL', 'MongoDB']
+    },
+    {
+      title: 'Cloud',
+      skills: ['Microsoft Azure']
     }
   ];
 
@@ -22,7 +26,7 @@ export default function Skills() {
     <section className="py-20 bg-white" id="skills">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
-        <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-8xl mx-auto grid md:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <div
               key={index}
