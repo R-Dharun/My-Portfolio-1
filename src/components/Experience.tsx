@@ -8,6 +8,23 @@ export default function Experience() {
         <div className="max-w-3xl mx-auto">
           <div className="relative pl-8 border-l-2 border-blue-500">
             <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-500" />
+
+            <div className="mb-8">
+              <div className="flex items-center gap-2 text-blue-500 mb-2">
+                <Briefcase size={20} />
+                <span className="font-semibold">Feb 2025 - Present</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Java Full Stack Trainee</h3>
+              <p className="text-gray-600 mb-2">Revature Pro</p>
+              <ul className="list-disc list-inside text-gray-600">
+                <li>Trained in Java, Spring Boot, Hibernate, and React.js for full-stack web development.</li>
+                <li>Built and deployed scalable apps using TypeScript, SQL Server, and Azure Services.</li>
+                <li>Integrated RESTful APIs with React.js for dynamic front-end experiences.</li>
+                <li>Improved problem-solving through coding challenges and real-world projects.</li>
+                <li>Collaborated in Agile teams using Jira for sprint planning and task tracking.</li>
+              </ul>
+            </div>
+            
             <div className="mb-8">
               <div className="flex items-center gap-2 text-blue-500 mb-2">
                 <Briefcase size={20} />
