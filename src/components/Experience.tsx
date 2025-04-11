@@ -17,7 +17,7 @@ export default function Experience() {
               <h3 className="text-xl font-bold mb-2">Java Full Stack Trainee</h3>
               <p className="text-gray-600 mb-2">Revature Pro</p>
               <ul className="list-disc list-outside pl-5 text-gray-600 leading-relaxed">
-                <li>Trained in Java, Spring Boot, Hibernate, and React.js for full-stack web development.</li>
+                <li>Trained in Java, Spring Boot, Hibernate, and AngularJS for full-stack web development.</li>
                 <li>Built and deployed scalable apps using TypeScript, SQL Server, and Azure Services.</li>
                 <li>Integrated RESTful APIs with React.js for dynamic front-end experiences.</li>
                 <li>Improved problem-solving through coding challenges and real-world projects.</li>
