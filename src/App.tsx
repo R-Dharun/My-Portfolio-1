@@ -10,9 +10,9 @@ import Contact from './components/Contact';
 
 function App() {
   useEffect(() => {
-    fetch("/.netlify/functions/notify");
+    fetch("/.netlify/function/notify.js");
   }, []);
-  
+
   return (
     <div className="min-h-screen">
       <Navbar />

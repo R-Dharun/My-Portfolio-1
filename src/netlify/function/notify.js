@@ -4,14 +4,14 @@ exports.handler = async (event, context) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "max.hunt346@gmail.com",         // 🔁 Replace with your Gmail
-      pass: "hsdk exqw tpju ouxp",       // 🔁 Use App Password, NOT Gmail password
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions = {
-    from: "max.hunt346@gmail.com",
-    to: "dharunmax@gmail.com",
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_TO,
     subject: "🔔 Portfolio Visit Alert",
     text: `Hey! Someone just visited your portfolio at ${new Date().toLocaleString()}`,
   };
