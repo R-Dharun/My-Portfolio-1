@@ -10,7 +10,7 @@ import Contact from './components/Contact';
 
 function App() {
   useEffect(() => {
-    fetch("/.netlify/function/notify.js");
+    fetch("/.netlify/functions/notify.js");
   }, []);
 
   return (
