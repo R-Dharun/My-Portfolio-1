@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import React, { useEffect} from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,9 +7,9 @@ import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import { supabase } from "../supabaseClient";
 
-const [count, setCount] = useState(null);
+
+
 
 function App() {
   useEffect(() => {
@@ -25,26 +25,13 @@ function App() {
 
 
     //Count Function
-    const updateVisitorCount = async () => {
-      const { data, error } = await supabase
-        .from("visitor_count")
-        .select("*")
-        .single();
-
-      if (!error && data) {
-        const newCount = data.count + 1;
-
-        await supabase
-          .from("visitor_count")
-          .update({ count: newCount })
-          .eq("id", data.id);
-
-        setCount(newCount);
-      }
-    };
-
-    updateVisitorCount();
-
+    fetch('/.netlify/functions/visitor')
+    .then((res) => res.json())
+    .then((data) => {
+      console.log('Visitor Count:', data.count);
+      // update the DOM with count if needed
+    })
+    .catch((err) => console.error('Error:', err));
   }, []);
   
   // useEffect(() => {
