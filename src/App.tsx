@@ -7,13 +7,25 @@ import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import { Helmet } from 'react-helmet';
+
 
 
 function App() {
   useEffect(() => {
-    fetch("/.netlify/functions/notify");
+    // Update counter
+    fetch("/.netlify/functions/counter")
+      .then((res) => res.json())
+      .then((data) => console.log("Visitor Count:", data.count));
+  
+    // Send email
+    fetch("/.netlify/functions/notify")
+      .then((res) => res.json())
+      .then((data) => console.log("Email Status:", data.message));
   }, []);
+  
+  // useEffect(() => {
+  //   fetch("/.netlify/functions/notify");
+  // }, []);
 
   return (
     <div className="min-h-screen">
