@@ -13,10 +13,7 @@ import Contact from './components/Contact';
 
 function App() {
   useEffect(() => {
-    // Update counter
-    fetch("/.netlify/functions/counter")
-      .then((res) => res.json())
-      .then((data) => console.log("Visitor Count:", data.count));
+    
   
     // Send email
     fetch("/.netlify/functions/notify")
