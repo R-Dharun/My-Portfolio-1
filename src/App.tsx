@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,32 +8,28 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
-
-
-
 function App() {
   useEffect(() => {
-    
-  
-    // Send email
+    // Send email notification
     fetch("/.netlify/functions/notify")
       .then((res) => res.json())
-      .then((data) => console.log("Email Status:", data.message));
+      .then((data) => console.log("Email Status:", data.message))
+      .catch((err) => console.error("Email Notification Error:", err));
 
-
-    //Count Function
+    // Count Function for visitor count
     fetch('/.netlify/functions/visitor')
-    .then((res) => res.json())
-    .then((data) => {
-      console.log('Visitor Count:', data.count);
-      // update the DOM with count if needed
-    })
-    .catch((err) => console.error('Error:', err));
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.count != null) {
+          console.log("Visitor Count:", data.count);
+        } else {
+          console.warn("⚠️ Count missing in response:", data);
+        }
+      })
+      .catch((err) => {
+        console.error("Visitor function error:", err);
+      });
   }, []);
-  
-  // useEffect(() => {
-  //   fetch("/.netlify/functions/notify");
-  // }, []);
 
   return (
     <div className="min-h-screen">
