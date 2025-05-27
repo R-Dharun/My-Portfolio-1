@@ -2,8 +2,8 @@ const { createClient } = require('@supabase/supabase-js');
 
 // Initialize Supabase Client
 const supabase = createClient(
-  'https://ktqzudycrskjuqrqduzt.supabase.co', // Replace with your Supabase URL
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt0cXp1ZHljcnNranVxcnFkdXp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ1NzcyNDIsImV4cCI6MjA2MDE1MzI0Mn0.FXjSxHHUizB2xp1gL_MzkScEmeTTRhEtMTkRAl_0kRY' // Replace with your Supabase API key
+  'URL1', // Replace with your Supabase URL
+  'API_KEY' // Replace with your Supabase API key
 );
 
 exports.handler = async (event, context) => {
