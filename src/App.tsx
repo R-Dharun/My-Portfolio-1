@@ -18,17 +18,24 @@ function App() {
 
     // Count Function for visitor count
     fetch('/.netlify/functions/visitor')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.count != null) {
-          console.log("Visitor Count:", data.count);
-        } else {
-          console.warn("⚠️ Count missing in response:", data);
-        }
-      })
-      .catch((err) => {
-        console.error("Visitor function error:", err);
-      });
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`Network error: ${res.statusText}`);
+    }
+    return res.json();
+  })
+  .then(data => {
+    if (data?.count !== undefined) {
+      console.log("Visitor Count:", data.count);
+    } else {
+      console.warn("⚠️ Count missing in response:", data);
+    }
+  })
+  .catch(err => {
+    console.error("Visitor function error:", err);
+  });
+
+
   }, []);
 
   return (
