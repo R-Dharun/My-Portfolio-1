@@ -1,6 +1,8 @@
 const nodemailer = require("nodemailer");
 
 exports.handler = async function (event, context) {
+  const { name, email, subject, message } = JSON.parse(event.body || '{}');
+
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -12,22 +14,30 @@ exports.handler = async function (event, context) {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_TO,
-    subject: "🚀 Portfolio Visitor",
-    text: `Someone visited your portfolio at ${new Date().toLocaleString()}`,
+    subject: subject || "📩 New Portfolio Message",
+    text: `
+You have received a new message from your portfolio:
+
+Name: ${name}
+Email: ${email}
+Subject: ${subject}
+Message: ${message}
+
+Time: ${new Date().toLocaleString()}
+    `,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log("✅ Email sent!");
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Email sent!" }),
     };
   } catch (error) {
-    console.error("❌ Error sending email:", error.message);
+    console.error("Error sending email:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
+      body: JSON.stringify({ message: error.message || "Internal Server Error" }),
     };
   }
 };

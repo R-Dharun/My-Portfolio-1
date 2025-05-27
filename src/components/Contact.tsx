@@ -19,7 +19,7 @@ export default function Contact() {
     setIsSubmitting(true);
     try {
       // Send the form data to the Netlify function
-      const response = await fetch('./send-mail', {
+      const response = await fetch('/.netlify/functions/notify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
