@@ -9,6 +9,25 @@ export default function Experience() {
           <div className="relative pl-8 border-l-2 border-blue-500">
             <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-500" />
 
+
+
+            <div className="mb-8">
+              <div className="flex items-center gap-2 text-blue-500 mb-2">
+                <Briefcase size={20} />
+                <span className="font-semibold">Jul 2025 - Present</span>
+              </div>
+              
+              <p className="text-xl font-bold mb-2"> Infosys</p>
+              <h3 className="text-gray-600 mb-2">Associate</h3>
+              <ul className="list-disc list-outside pl-5 text-gray-600 leading-relaxed">
+                <li>Upgraded the Infosys LEX learning platform, improving accessibility for employees.</li>
+                <li>Built responsive frontend features with ReactJS to enhance UI/UX.</li>
+                <li>Supported backend development in Spring Boot, focusing on APIs and performance.</li>
+                <li>Collaborated with the team to deliver smooth platform upgrades.</li>
+              </ul>
+            </div>
+
+
             <div className="mb-8">
               <div className="flex items-center gap-2 text-blue-500 mb-2">
                 <Briefcase size={20} />
@@ -40,22 +59,7 @@ export default function Experience() {
               </ul>
             </div>
             
-            <div className="mb-8">
-              <div className="flex items-center gap-2 text-blue-500 mb-2">
-                <Briefcase size={20} />
-                <span className="font-semibold">Jan 2023 - May 2024</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Data Entry & Management Intern</h3>
-              <p className="text-gray-600 mb-2"> SRIRAM Weaving Mill Ltd</p>
-              <ul className="list-disc list-outside pl-5 text-gray-600 leading-relaxed">
-                <li>Managed large volumes of data related to machine parts and operations, ensuring accuracy and organization.</li>
-                <li>Performed data entry using Excel, maintaining records of machine components and replacements.</li>
-                <li>Utilized Sulcol software to look up machine parts and track replacements.</li>
-                <li>Created and maintained documentation using Microsoft Word for operational records.</li>
-                <li>Stored and backed up data securely using Google Drive for easy retrieval and data safety.</li>
-                <li>Collaborated with the team to ensure smooth data management and machine maintenance workflows.</li>
-              </ul>
-            </div>
+            
           </div>
         </div>
       </div>
