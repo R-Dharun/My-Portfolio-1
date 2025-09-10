@@ -12,12 +12,12 @@ export default function Experience() {
             <div className="mb-8">
               <div className="flex items-center gap-2 text-blue-500 mb-2">
                 <Briefcase size={20} />
-                <span className="font-semibold">Feb 2025 - Present</span>
+                <span className="font-semibold">Feb 2025 - Jun 2025</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Java Full Stack Trainee</h3>
-              <p className="text-gray-600 mb-2">Revature Pro</p>
+              <h3 className="text-xl font-bold mb-2">Revature </h3>
+              <p className="text-gray-600 mb-2">Java React Full Stack Developer</p>
               <ul className="list-disc list-outside pl-5 text-gray-600 leading-relaxed">
-                <li>Trained in Java, Spring Boot, Hibernate, and AngularJS for full-stack web development.</li>
+                <li>Trained in Java, Spring Boot, Hibernate, and AngularJS for full react full stack web development.</li>
                 <li>Built and deployed scalable apps using TypeScript, SQL Server, and Azure Services.</li>
                 <li>Integrated RESTful APIs with React.js for dynamic front-end experiences.</li>
                 <li>Improved problem-solving through coding challenges and real-world projects.</li>
@@ -30,8 +30,8 @@ export default function Experience() {
                 <Briefcase size={20} />
                 <span className="font-semibold">Jun 2024 - Dec 2024</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Associate Software Engineer</h3>
-              <p className="text-gray-600 mb-2">DHL</p>
+              <h3 className="text-xl font-bold mb-2 ">DHL</h3>
+              <p className="text-gray-600 mb-2">Associate Software Engineer</p>
               <ul className="list-disc list-outside pl-5 text-gray-600 leading-relaxed">
                 <li>Developed and maintained web applications using modern technologies, like ReactJS, NodeJS.</li>
                 <li>Worked on innovative projects utilizing the OpenAI API, demonstrating expertise in Generative AI and machine learning applications.</li>
