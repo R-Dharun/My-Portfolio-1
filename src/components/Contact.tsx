@@ -55,7 +55,7 @@ export default function Contact() {
             </div>
             <div className="text-center">
               <MapPin className="mx-auto mb-4 text-blue-500" size={24} />
-              <p className="text-gray-600">Winter Springs, FL, USA</p>
+              <p className="text-gray-600"> Texas, USA</p>
             </div>
           </div>
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
