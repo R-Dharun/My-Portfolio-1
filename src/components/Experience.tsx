@@ -20,10 +20,10 @@ export default function Experience() {
               <p className="text-xl font-bold mb-2"> Infosys</p>
               <h3 className="text-gray-600 mb-2">Associate</h3>
               <ul className="list-disc list-outside pl-5 text-gray-600 leading-relaxed">
-                <li>Upgraded the Infosys LEX learning platform, improving accessibility for employees.</li>
-                <li>Built responsive frontend features with ReactJS to enhance UI/UX.</li>
-                <li>Supported backend development in Spring Boot, focusing on APIs and performance.</li>
-                <li>Collaborated with the team to deliver smooth platform upgrades.</li>
+                <li>Work on full-stack development using Java, Spring Boot, and React for enterprise applications supporting the Verizon client.</li>
+                <li>Build and maintain REST APIs, business logic, and database integrations using MySQL.</li>
+                <li>Analyze and fix defects from testing and production with proper root-cause analysis.</li>
+                <li>Deploy and support applications on AWS while working in an Agile team.</li>
               </ul>
             </div>
 
