@@ -2,7 +2,7 @@ export default function Skills() {
   const skillCategories = [
     {
       title: 'Programming Languages',
-      skills: ['C/C++', 'Python', 'Java', 'HTML/CSS', 'JavaScript', 'TypeScript']
+      skills: ['Python', 'Java', 'HTML/CSS', 'JavaScript', 'TypeScript']
     },
     {
       title: 'Frameworks',
@@ -10,7 +10,7 @@ export default function Skills() {
     },
     {
       title: 'Developer Tools',
-      skills: ['GitHub', 'Visual Studio Code', 'Postman',]
+      skills: ['GitHub', 'Intellij','Visual Studio Code', 'Postman',]
     },
     {
       title: 'Databases',
@@ -18,7 +18,7 @@ export default function Skills() {
     },
     {
       title: 'Cloud',
-      skills: ['Microsoft Azure']
+      skills: ['Amazon Web Services','Microsoft Azure']
     }
   ];
 
